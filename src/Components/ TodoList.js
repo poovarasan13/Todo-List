@@ -46,27 +46,29 @@ const toggleDelete=()=>{
     
     return (
         <>
-        <div className='container alert alert-light '> 
+        <div className='container-fluid alert alert-light mb-5 pb-5'> 
             <div className='row mb-4 '>
             <div className='text-center fs-1'>TodoList</div></div>
 
             <div className='row justify-content-center mt-3 pt-4'>
-             <div className='col-2'>
+             <div className='col-md-3 col-6 my-2'>
                 <button className='btn-sm btn btn-warning' onClick={toggleAddTask}>
                     {showAddTask ? 'Hide Add Task' : ' Add Task'}
                  </button>
               </div>
   
 
-               <div className='col-2'>
+               <div className='col-md-3 col-6 my-2'>
                 <button className='btn-sm btn btn-warning' onClick={toggleViewTask}>
                    {showViewTask ? 'Hide View Task': ' View Task'}
                     </button></div>
-                    <div className='col-2'><button className='btn-sm btn btn-warning' onClick={toggleComplete}>
+                    <div className='col-md-3 col-6 my-2'>
+                      <button className='btn-sm btn btn-warning' onClick={toggleComplete}>
                    {showComplete ? 'Hide Completed Task': ' Completed Tasks'}
                     </button>
                     </div>
-                    <div className='col-2'><button className='btn-sm btn btn-warning' onClick={toggleDelete}>
+                    <div className='col-md-3 col-6 my-2'>
+                      <button className='btn-sm btn btn-warning' onClick={toggleDelete}>
                    {showDelete ? 'Hide Deleted Task': 'Deleted Tasks'}
                     </button></div>
                 
@@ -74,7 +76,8 @@ const toggleDelete=()=>{
 
             </div>
 
-            <div className='row justify-content-center pt-4'>
+            <div className='row justify-content-center pt-4 mb-5 pb-5'>
+            
             {showAddTask && <AddTask addNewTask={addNewTask} />}
             {showViewTask  && <ViewTask tasks={tasks} setTasks={setTasks} setComplte={setComplte} setDelete={setDelete} complete={complete} deletetask={deletetask}/>}
             {showComplete &&<CompletedTask complete={complete} />}

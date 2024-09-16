@@ -31,7 +31,7 @@ function ViewTask({tasks,setTasks,setComplte,setDelete,complete,deletetask}) {
         <div>
           
         <div className='row justify-content-center'>
-            <div className='col-5'>
+            <div className='col-5 '>
             <ul className='list-unstyled text-deanger'>
             {tasks.length > 0 ? (
             tasks.map((t, i) => (
