@@ -22,7 +22,7 @@ function AddTask({addNewTask}) {
             <input type='text' placeholder='Enter The Task' value={task} onChange={e=>setTask(e.target.value)}></input>
        
      <button className="btn ms-3 btn-sm btn-success my-3" onClick={handleSubmit}>
-        Add Task
+        Add Task :
       </button>
       <div className='col-12'>{msg}</div>
       </div>
